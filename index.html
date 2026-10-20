@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive layout for mobile and desktop -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- Browser theme color -->
+  <meta name="theme-color" content="#11152d">
+
+  <!-- Page information -->
+  <title>Before You Close Your Eyes | Visual Novel</title>
+
+  <meta
+    name="description"
+    content="Before You Close Your Eyes is a dreamy, melancholic anime romance visual novel about memories, dreams, and the people we refuse to forget."
+  >
+
+  <!-- Favicon (emoji icon) -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%99%3C/text%3E%3C/svg%3E"
+  >
+
+  <!-- Main game stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Preload the main menu background -->
+  <link
+    rel="preload"
+    as="image"
+    href="assets/backgrounds/menu-background.jfif"
+  >
+</head>
+
+<body>
+
+  <!--
+    MAIN GAME CONTAINER
+
+    script.js generates the Start menu, Chapters,
+    Characters, Settings, dialogue, and choices
+    inside this element.
+  -->
+  <main
+    id="app"
+    aria-live="polite"
+    aria-label="Before You Close Your Eyes visual novel"
+  >
+    <!-- Shown while game scripts are loading -->
+    <section class="screen">
+      <div class="panel menu">
+
+        <p class="eyebrow">
+          Interactive Fiction
+        </p>
+
+        <h1>
+          Before You Close Your Eyes
+        </h1>
+
+        <p class="subtitle">
+          A story about love, memories, and
+          the things that disappear at dawn.
+        </p>
+
+        <p class="hint">
+          Loading your story...
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!--
+    IMPORTANT SCRIPT ORDER
+
+    1. assets.js       - Background and sprite paths
+    2. characters.js   - Character information
+    3. story.js        - Story scenes and dialogue
+    4. script.js       - Main game engine
+
+    Keep this order.
+  -->
+
+  <script src="assets.js"></script>
+
+  <script src="characters.js"></script>
+
+  <script src="story.js"></script>
+
+  <script src="script.js"></script>
+
+  <!-- Message for browsers without JavaScript -->
+  <noscript>
+    <p style="
+      text-align: center;
+      color: white;
+      background: #11152d;
+      padding: 24px;
+      font-family: sans-serif;
+    ">
+      JavaScript is required to play
+      Before You Close Your Eyes.
+      Please enable JavaScript in your browser.
+    </p>
+  </noscript>
+
+</body>
+</html>
